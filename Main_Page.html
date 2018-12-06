@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1">
+    <title>Title</title>
+</head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+pre {
+   font-family: "courier new", courier, monospace;
+   font-size: 20px;
+}
+
+/* Style the header */
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+    font-size: 40px;
+}
+    /* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 5px auto;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width:100%;
+    }
+h1{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 150px;
+  color: #fff;
+}
+
+header h1{}
+
+.content h1{
+  line-height: 1000px;
+  color: #999;
+}
+</style>
+<body>
+<span id="Go_Home"></span>
+<div class="header">
+  <h1>Website on Probability</h1>
+  <p>Casey Brennan and John Cuenca</p>
+
+</div>
+<div class="navbar">
+    <a href="./Terms_Page.html">Terms</a>
+    <a href="./Practice_Problems.html">Practice</a>
+    <a href="./Ref_Page.html" class="right">References</a>
+</div>
+<div class="row">
+  <div class="side">
+      <ul>
+          <li><a href="#Terminology_and_Background">7.1 Terminology and Background</a></li>
+          <li><a href="#Complement_P">7.2 Complement</a></li>
+          <li><a href="#Elementary_Rules_for_Probability">7.3 Elementary Rules for Probability</a></li>
+          <li><a href="#General_Rules_for_Probability">7.4 General Rules for Probability</a></li>
+          <li><a href="#Bernoulli_Trials_and_Probability_Distributions">7.5 Bernoulli Trials and Probability Distributions</a></li>
+
+      </ul>
+
+
+  </div>
+  <div class="main">
+
+      <span id ="Terminology_and_Background"></span>
+      <h2>7.1 Terminology and Background</h2>
+      <ul>
+          <li><strong>Event</strong> - a specific set of outcomes (ex. In a coin tossing question, the event would be “tossing a head”).</li>
+          <ul>
+              <li>Represented by the letter ‘E’.</li>
+          </ul>
+          <li><strong>Sample space</strong> (of the event) - the set of all possible outcomes</li>
+          <li>Thus, the formula for calculating the probability of the event (E) is… </li>
+          <p>Here goes the image</p>
+          <li>With this formula, we are making two assumptions:</li>
+          <ul>
+              <li>The sample space is finite</li>
+              <li>All observations are equally likely</li>
+          </ul>
+          <li>
+              Example: You flip a coin 5 times. What it the probability that you will get heads all 5 times?
+          </li>
+          <ul>
+              <li>
+                  <pre>|E| = 1<sup>5</sup></pre>
+              </li>
+              <li>
+                  <pre>|S| = 2<sup>5</sup></pre>
+              </li>
+              <li>
+                  <pre><sup>|E|</sup>/<sub>|S|</sub> = <sup>1</sup>/<sub>32</sub> = 0.03125</pre>
+              </li>
+          </ul>
+          <li>The probability that you will get heads all 5 times is 1/32 or approx. 3.125%</li>
+          <li>Another example being: </li>
+          <div style="padding: 10px;background-color: #fff;margin-bottom: 20px;border: 2px solid #243778">
+            <h2>EXAMPLE:&nbsp;Blood Types</h2>
+            <p>As previously discussed, all human blood can be typed as O, A, B or AB.</p>
+            <p>In addition, the frequency of the occurrence of these blood types varies by ethnic and racial groups.</p>
+            <p>According to
+                Stanford University’s Blood
+                Center (<a href="https://bloodcenter.stanford.edu/" target="_blank" rel="noopener noreferrer">bloodcenter.stanford.edu</a>),
+                these are the probabilities of human blood types in the United States (the probability for type A has been omitted on purpose):</p>
+            <p style="text-align: center">
+                <img class="aligncenter size-full wp-image-3972"
+                     title="image010" src="http://phhp-faculty-cantrell.sites.medinfo.ufl.edu/files/2013/01/image010.gif"
+                     alt="" width="313" height="55" srcset="https://bolt.mph.ufl.edu/files/2013/01/image010.gif 313w, https://bolt.mph.ufl.edu/files/2013/01/image010-220x38.gif 220w"
+                     sizes="(max-width: 313px) 100vw, 313px"></p>
+            <p><strong>Motivating question for rule 2:</strong>&nbsp;A person in the United
+                States is chosen at random. What is the probability of the person having blood type A?</p>
+            <p><strong>Answer:</strong>&nbsp;Our intuition tells us that since the four blood types O,
+                A, B, and AB exhaust all the possibilities, their probabilities together must sum to 1, which is the
+                probability of a “certain” event (a person has one of these 4 blood types for certain).</p>
+            <p>Since the probabilities of O, B, and AB together sum to 0.44 + 0.1 + 0.04 = <strong>0.58</strong>,
+                the probability of type A must be the remaining <strong>0.42</strong> (1 – 0.58 = 0.42):</p>
+            <p style="text-align: center"><img class="aligncenter size-full wp-image-3973"
+                                               title="Data given in &quot;Blood Type: Probability&quot;
+                                               Format: O: 0.44; A: 0.42; B: 0.10; AB: 0.04;" src="http://phhp-faculty-cantrell.
+                                               sites.medinfo.ufl.edu/files/2013/01/image011.gif" alt="Data given in &quot;
+                                               Blood Type: Probability&quot; Format: O: 0.44; A: 0.42; B: 0.10; AB: 0.04;"
+                                               width="313" height="55" srcset="https://bolt.mph.ufl.edu/files/2013/01/image011.gif 313w,
+                                               https://bolt.mph.ufl.edu/files/2013/01/image011-220x38.gif 220w" sizes="(max-width: 313px) 100vw, 313px"></p>
+        </div>
+      </ul>
+      <p>Click to go back to the <a href="#Go_Home">top</a></p>
+      <span id = "Complement_P"></span>
+      <h2>7.2 Complement</h2>
+      <ul>
+          <li><strong>Complement of an event</strong> - the event consisting of all the outcomes that do not occur in E. Can be calculated by S - E.</li>
+          <ul>
+              <li>Represented by E’</li>
+              <li><pre>E' = S - E</pre></li>
+          </ul>
+          <div style="padding: 10px;background-color: #fff;margin-bottom: 20px;border: 2px solid #243778">
+            <h2>EXAMPLE:&nbsp;Blood Types</h2>
+            <p>Back to the blood type example:</p>
+            <p style="text-align: center"><img class="aligncenter size-full wp-image-3973" title="image011" src="http://phhp-faculty-cantrell.sites.medinfo.ufl.edu/files/2013/01/image011.gif" alt="" width="313" height="55" srcset="https://bolt.mph.ufl.edu/files/2013/01/image011.gif 313w, https://bolt.mph.ufl.edu/files/2013/01/image011-220x38.gif 220w" sizes="(max-width: 313px) 100vw, 313px"></p>
+            <p>Here is some additional information:</p>
+            <ul>
+            <li>A person with type&nbsp;<strong>A</strong>&nbsp;can donate blood to a person with type&nbsp;
+                <strong>A</strong>&nbsp;or&nbsp;<strong>AB</strong>.</li>
+            <li>A person with type&nbsp;<strong>B</strong>&nbsp;can donate blood to a person with type&nbsp;
+                <strong>B</strong>&nbsp;or&nbsp;<strong>AB</strong>.</li>
+            <li>A person with type&nbsp;<strong>AB</strong>&nbsp;can donate blood to a person with type&nbsp;
+                <strong>AB</strong>&nbsp;only.</li>
+            <li>A person with type&nbsp;<strong>O</strong>&nbsp;blood can donate to anyone.</li>
+            </ul>
+            <p>What is the probability that a randomly chosen person cannot donate blood to everyone? In other words,
+                what is the probability that a randomly chosen person does not have blood type O? We need to find P(not O), in other words P(O').
+                Using the Complement Rule, P(O') = 1 – P(O) = 1 – 0.44 = 0.56. In other words, 56% of the U.S. population
+                does not have blood type O:</p>
+            <p style="text-align: center"><img class="aligncenter size-full wp-image-3985" title="image014" src="http://phhp-faculty-cantrell.sites.medinfo.ufl.edu/files/2013/01/image014.gif" alt="" width="285" height="220" srcset="https://bolt.mph.ufl.edu/files/2013/01/image014.gif 285w, https://bolt.mph.ufl.edu/files/2013/01/image014-130x100.gif 130w, https://bolt.mph.ufl.edu/files/2013/01/image014-220x169.gif 220w" sizes="(max-width: 285px) 100vw, 285px"></p>
+            <p>Clearly, we could also find P(O') directly by adding the probabilities of B, AB, and A.</p>
+            </div>
+      </ul>
+
+      <span id ="Elementary_Rules_for_Probability"></span>
+     <p>Go back to the <a href="#Go_Home">top</a></p>
+      <h2>7.3 Elementary Rules for Probability</h2>
+      <ul>
+          <li><strong>Disjointness</strong> - two or more events are disjoint if the outcomes associated with one event are not present in the outcomes of any other events </li>
+          <ul>
+              <li>Events 1 and 2 are disjoint if…</li>
+              <li><pre>E<sub>1</sub> &#8745; E<sub>2</sub> = 0</pre></li>
+          </ul>
+            <li><strong>Independent</strong> - Event 1 and Event 2 are independent of each other if the outcome of any one of these events does not in any way
+              impact or influence the outcome of the other event</li>
+
+
+          <ul>
+              <li>Events 1 and 2 are independent if …</li>
+              <li>If whether or not one event occurs does affect the probability that the other event will occur,
+                    then the two events are said to be dependent.</li>
+              <li><pre>Prob(E<sub>1</sub> &#8745; E<sub>2</sub>) = Prob(E<sub>1</sub>) &lowast; Prob(E<sub>2</sub>)</pre></li>
+          </ul>
+
+      <div style="padding: 10px;background-color: #fff;margin-bottom: 20px;border: 2px solid #243778">
+
+          <h2>EXAMPLE:</h2>
+          <p>1.</p>
+          <p>A woman's pocket contains two quarters and two nickels.</p>
+          <p>   She randomly extracts one of the coins, and after looking at it, replaces it before picking a second coin</p>
+          <p>   Let Q1 be the event that the first coin is a quarter and Q2 be the event that the second coin is a quarter.</p>
+          <p><strong>   Are Q1 and Q2 independent events? </strong></p>
+          <ul>
+              <li>Why?</li>
+          </ul>
+          <p>   Since the first coin that was selected is <strong>replaced</strong>, whether or not Q1 occurred (i.e., whether the first
+              coin was a quarter) has no effect on the probability that the second coin will be a quarter, P(Q2).</p>
+          <p>   In either case (whether Q1 occurred or not), when she is selecting the second coin, she has in her pocket:</p>
+          <p>   and therefore the <strong>P(Q2) = 2/4 = 1/2</strong> regardless of whether Q1 occurred.</p>
+          <p>2.</p>
+          <p>A woman's pocket contains two quarters and two nickels.</p>
+          <p>She randomly extracts one of the coins, and <strong>without placing</strong> it back into her pocket, she picks a second coin.</p>
+          <p>As before, let Q1 be the event that the first coin is a quarter, and Q2 be the event that the second coin is a quarter.</p>
+          <p><strong>   Are Q1 and Q2 independent events? </strong></p>
+          <ul>
+              <li>Q1 and Q2 are <strong>not independent</strong>. They are <strong>dependent</strong>. Why?</li>
+          </ul>
+          <p>Since the first coin that was selected is not replaced, whether Q1 occurred (i.e., whether the first coin
+              was a quarter) does affect the probability that the second coin is a quarter, P(Q2).</p>
+          <p>If Q1 occurred (i.e., the first coin was a quarter), then when the woman is selecting the second coin,
+              she has in her pocket:</p>
+          <p style="text-align: center"><img class="aligncenter size-full wp-image-4281" title="One Quarter and Two Nickels"
+                  src="http://phhp-faculty-cantrell.sites.medinfo.ufl.edu/files/2013/01/image021.gif"
+                  alt="One Quarter and Two Nickels" width="190" height="72"></p>
+          <ul>
+              <li>In this case, P(Q2) = 1/3.</li>
+          </ul>
+          <p>However, if Q1 has not occurred (i.e., the first coin was not a quarter, but a nickel), then when the woman
+              is selecting the second coin, she has in her pocket:</p
+          ><p style="text-align: center"><img class="aligncenter size-full wp-image-4280"
+                                             title="Two Quarters and One Nickel."
+                                             src="http://phhp-faculty-cantrell.sites.medinfo.ufl.edu/files/2013/01/image022.gif"
+                                             alt="Two Quarters and One Nickel." width="197" height="73"></p>
+
+          <ul>
+              <li>In this case, P(Q2) = 2/3.</li>
+          </ul>
+
+
+      </div>
+          <li><p>The Elementary Addition Rule</p></li>
+          <ul>
+              <li>If two events E<sub>1</sub> and E<sub>2</sub> are disjoint...</li>
+              <li><pre>Prob(E<sub>1</sub> &cup; E <sub>2</sub>) = Prob(E<sub>1</sub>) + Prob(E<sub>2</sub>) </pre></li>
+          </ul>
+          <li>The Elementary Multiplication Rule</li>
+          <ul>
+              <li>If two events E<sub>1</sub> and E<sub>2</sub> are independent…</li>
+              <li><pre>Prob(E<sub>1</sub> &#8745; E<sub>2</sub>) = Prob(E<sub>1</sub>) &lowast; Prob(E<sub>2</sub>)</pre></li>
+              <div style="padding : 10px;background-color: #fff; margin-bottom: 20px;border: 2px solid #243778">
+                  <h2>Example:</h2>
+                  <p> A simple example would be tossing a coin 3 times.</p>
+                  <p>In this scenario, each coin toss is an independent event, as the result of each coin toss has no
+                      bearing on the result of the next.</p>
+                  <p>The probability of getting heads is ½. Multiply ½ 3 times to represent each coin toss. Therefore...</p>
+                  <p style="text-align: center"><img src="http://latex.codecogs.com/svg.latex?Prob(3heads) = \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{8}" border="0"/></p>
+
+
+
+
+
+              </div>
+          </ul>
+</ul>
+      <p>Go back to the <a href="#Go_Home">top</a></p>
+      <span id="General_Rules_for_Probability"></span>
+      <h2>7.4 General Rules for Probability</h2>
+      <ul>
+          <li>The General Addition Rule</li>
+          <ul>
+              <li>If two events E<sub>1</sub> and E<sub>2</sub> are NOT disjoint…</li>
+              <li><pre>Prob(E<sub>1</sub> &#8745; E<sub>2</sub>) = Prob(E<sub>1</sub>) &lowast; Prob(E<sub>2</sub>) + Prob(E<sub>1</sub> &#8745; E<sub>2</sub>)</pre></li>
+              <div style="padding : 10px;background-color: #fff; margin-bottom: 20px;border: 2px solid #243778">
+                  <h2>Example:</h2>
+                  <p>Find the probability that you randomly pick a card from a standard deck of cards that is red or a queen.</p>
+                  <p>Since there are cards that are both red and queens, the events are NOT disjoint.</p>
+                  <p>Therefore we must add the probability of Event 1 (Picking a Red card) and Event 2 (Picking a Queen),
+                      but subtract the probability that you choose a Red Queen. Therefore…</p>
+                  <p style="text-align: center"><img src="http://latex.codecogs.com/svg.latex?Prob(Red \cup Queen) = \frac{26}{52} + \frac{4}{52} - \frac{2}{52} = \frac{28}{52} = 0.5385" border="0"/></p>
+
+
+              </div>
+          </ul>
+      </ul>
+      <p>Go back to the <a href="#Go_Home">top</a></p>
+      <span id="Bernoulli_Trials_and_Probability_Distributions"></span>
+      <h2>7.5 Bernoulli Trials and Probability Distributions</h2>
+      <ul>
+          <li><strong>Bernoulli trial</strong> - an experiment in which there are only two possible outcomes</li>
+          <ul>
+              <li>In a Bernoulli trial, there is the probability of success (represented by p) and
+                  there is probability of failure, which is (1 - p), represented by q.</li>
+              <li><strong>Binomial Distribution Formula:</strong></li>
+              <ul>
+                  <p style="text-align: center"><img src="http://latex.codecogs.com/svg.latex?Prob(success) = _{Trials}C_{Successes} \cdot (Probability of Success)^{successes}\cdot (Probability of Failures)^{Trials - successes}" border="0"/></p>
+                  <p>The general formula is:</p>
+                  <p style="text-align: center"><img src="http://latex.codecogs.com/svg.latex?Prob(success) = _{n}C_{x} \cdot (p)^{x}\cdot (q)^{n-x}" border="0"/></p>
+
+              </ul>
+              <li><strong>Probability Distribution</strong> - determines the probabilities of all possible outcomes over a specified sample space.</li>
+              <div style="padding : 10px;background-color: #fff; margin-bottom: 20px;border: 2px solid #243778">
+                  <h2>Example:</h2>
+                  <p>You roll a dice 4 times. What is the probability that you get heads all 4 times?</p>
+                  <p>This is a binomial problem because there is only two outcomes (getting heads or tails)</p>
+                  <p style="text-align: center"><img src="http://latex.codecogs.com/svg.latex?Prob(Geeting H 4 times) = _{4}C_{4} \cdot (0.5)^{4}\cdot (0.5)^{4-4} = 0.0625" border="0"/></p>
+                  <p style="text-align: center"><pre>A 6.25% Chance of getting 4 heads on 4 coin tosses</pre></p>
+
+
+
+
+              </div>
+          </ul>
+      </ul>
+
+</body>
+</html>

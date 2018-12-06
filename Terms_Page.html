@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1">
+    <title>Terms</title>
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+pre {
+   font-family: "courier new", courier, monospace;
+   font-size: 20px;
+}
+
+/* Style the header */
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #00ffff;
+    color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+    font-size: 40px;
+}
+    /* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 5px auto;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width:100%;
+    }
+h1{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 150px;
+  color: #fff;
+}
+
+header h1{}
+
+.content h1{
+  line-height: 1000px;
+  color: #999;
+}
+
+</style>
+<body>
+<div class="header">
+  <h1>Terms</h1>
+    <p>Casey Brennan and John Cuenca</p>
+
+</div>
+<div class="navbar">
+    <a href="./Main_Page.html">Home</a>
+    <a href="./Practice_Problems.html">Practice</a>
+    <a href="./Ref_Page.html" class="right">References</a>
+</div>
+<div class="main">
+
+<p>Here are the main terms used in the Chapter:</p>
+    <p>
+  <b> Bernoulli trial </b> - an experiment in which there are only two possible outcomes
+</p>
+<p>
+  <b> Complement </b> (of an event) - the event consisting of all the outcomes that do not occur in E. Can be calculated by S - E Can also be represented by E’
+</p>
+<p>
+  <b> Disjointness </b> - two or more events are disjoint if the outcomes associated with one event are not present in the outcomes of any other events
+</p>
+<p>
+  <b>Event</b> - a specific set of outcomes (ex. In a coin tossing question, the event would be “tossing a head”)
+</p>
+<p>
+  <b> Independent </b> - Event 1 and Event 2 are independent of each other if the outcome of any one of these events does not in any way impact or influence the outcome of the other event
+</p>
+<p>
+  <b> Probability Distribution </b> - determines the probabilities of all possible outcomes over a specified sample space.
+</p>
+<p>
+  <b> Sample space </b> (of the event) - the set of all possible outcomes
+</p>
+</div>
+</body>
+</html>

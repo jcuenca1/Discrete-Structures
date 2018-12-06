@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1">
+    <title>Practice</title>
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+pre {
+   font-family: "courier new", courier, monospace;
+   font-size: 20px;
+}
+
+/* Style the header */
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #e32636;
+    color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+    font-size: 40px;
+}
+    /* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 5px auto;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width:100%;
+    }
+h1{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 150px;
+  color: #fff;
+}
+
+header h1{}
+
+.content h1{
+  line-height: 1000px;
+  color: #999;
+}
+
+</style>
+<body>
+
+<div class="header">
+  <h1>Probability Problems</h1>
+  <p>Casey Brennan and John Cuenca</p>
+
+</div>
+<div class="navbar">
+    <a href="./Main_Page.html">Home</a>
+    <a href="./Terms_Page.html">Terms</a>
+    <a href="./Ref_Page.html" class="right">References</a>
+
+</div>
+<div class="main">
+<h2> Practice Problems </h2>
+
+  <div id="Prob_Qs">
+      <ul>
+
+          <li><u> Question 1: </u></li>
+          <br> In an election, there are 4 Democrats, 6 Republicans, and 2 Libertarians running for president.
+          What is the probability that if you randomly choose a candidate, you will choose a Republican?
+              <br>
+          <li><br> <u> Answer 1: </u>
+          <br> The same space is the total amount of  candidates running for office. This can be calculated by adding 4 + 6 + 2, which equals 12 candidates total. There are 4 events where there would be a Republican candidate chosen, as there are 4 Republican candidates. <br>
+          <b><br> Therefore, the probability you will choose a Republican candidate is 4 / 12 or 1 / 3. </b>
+              <br></li><br>
+          <li> <u> Question 2: </u></li>
+          <br> A survey distributed to 30 students asks the question, "Out of the following colors, red, orange, yellow, green, blue, or purple, which is your favorite?" 6 students choose red, 1 student chose yellow, 2 students choose orange, and 10 students choose green. Assuming every student only chose one color, what is the probaility that a student chose a cool color (green, blue, or purple)?
+              <br>
+          <li><br> <u> Answer 2: </u>
+          <br> We first must acknowledge that there is missing information because the responses did not include the
+              students who voted for purple, nor. Even though not all of the results of the cool colors are listed,
+              we can find the the complement of the warm colors (red, orange, and yellow). <br>
+          The event of getting a warm color is 9 (6 + 1 + 2). The event of getting a cool color can be calculated by
+              subtracting the event of a warm color from the sample space (the 30 students). Therefore, the event of
+              getting a cool color is 21(30 - 9).
+          <br> <br><b> Therefore, the probability of a student choosing a cool color is 21 / 30. </b> <br></li>
+          <br>
+          <li><u> Question 3: </u></li>
+          <br> If you flip a coin and roll a die, what is the probability that you get heads and roll a 4?
+          <br>
+          <li><br> <u> Answer 3: </u>
+          <br> In this problem, flipping a coin and rolling a die are two independent events.
+              In the case of independent events, we use the elementary rule of multiplication. T
+              he probability that you get heads is 1 / 2 and the probability that you roll a 4 is
+              1 / 6. To find the probability of both of these events, you must multiply 1 / 2 by 1 / 6.
+              <br><br> <b> Therefore, the probability of flipping heads and rolling a 4 is 1 / 12 (1 / 2 * 1 / 6). </b> <br></li>
+            <br>
+          <li> <u> Question 4: </u></li>
+          <br> Using a standard deck of cards, what is the probability that you pick or odd number card that is black? (don't count an ace as a 1) <br>
+
+          <li><br> <u> Answer 4: </u>
+          <br> In this question, we notice we can't simply add the the probability of getting an odd number card
+              or a black card because we would be counting the cards that are both odd numbers and black. We use
+              the general addition rule to solve this problem. The probability that we choose an odd number card is
+              16 / 52 and the probability of choosing a black card is 26 / 52. The probability that you choose a card
+              that is an odd number and is black is 8 / 52. Using the general addition rule, we can calculate the
+              probability of choosing a card that is an odd number or black by adding the probability of choosing an
+              odd number card (16 / 52) and the probability of choosing a black card (26 / 52), and then subtracting
+              the probability of choosing a card that is an odd number and black (8 / 52). <br>
+          <b><br> Therefore, the probability the of choosing a card that is an odd number or black is 34 / 52 or 17 / 26. </b>
+              <br></li><br>
+          <li><u> Question 5: </u></li>
+          <br> In an university of 580 students, the students whose GPA is in the top 10% of their class are in the honors program. If you choose 20 students, what is the probability that 5 students are in the honors program?
+          <br>
+          <li><br> <u> Answer 5: </u>
+          <br> Since there are only two events (being in the honors program or not being in it), this is an example of a Bernoulli trial. We can use the formula below: <br>
+              <p style="text-align: center"><img src="http://latex.codecogs.com/svg.latex?Prob(success) = _{Trials}C_{Successes} \cdot (Probability of Success)^{successes}\cdot (Probability of Failures)^{Trials - successes}" border="0"/>
+          <br><br>The probability of all 5 students being in the honors program is equal to </p>
+              <p style="text-align: center"><img src="http://latex.codecogs.com/svg.latex?Prob(success) = _{20}C_{5} \cdot (0.10)^{5}\cdot (0.90)^{15}" border="0"/></p><br>
+
+              <br> <b> Therefore, the probability that you randomly chose 5 honors students out of 20 is about 0.03192 or 3.19%. </b></li>
+      </ul>
+      </div>
+</div>
+
+</body>
+<script>
+function toggle(tag) {
+        var x = document.getElementsByName(tag)[0];
+        var a = x.parentNode
+        if (a.style.display=='block'){
+            a.style.display='none'
+        }else{
+            a.style.display='block'
+        }
+    }
+    function init() {
+        //this function will add show hide functionality to paired list items,
+        //as long as the answer is a list item straight after the question list item.
+        //You can also have as many separate lists as you want.
+        //all lists must be contained within a div with id QA
+ 
+        var obj = document.getElementById('Prob_Qs');
+        var elements = obj.getElementsByTagName('li');
+               var index = 1
+        //add javascript to question elements
+              //you could also add styling to question elements here
+        for (var i=0; i < elements.length; i+=2){
+            var element = elements[i];
+            element.innerHTML = "<a href='javascript:toggle(" + index + ")'>" + element.innerHTML + "</a>"
+            index = index + 1
+        }
+        //add bookmark to answer elements and add styling
+        var index = 1
+        for (var i=1; i < elements.length; i+=2){
+            var element = elements[i];
+            element.innerHTML = "<a name='" + index + "' id='" + index + "'></a>" + element.innerHTML
+            index = index + 1
+                 element.style.padding = '0px 0px 10px 20px' //add indent to answer
+                       element.style.listStyleType = 'none' //remove bullet
+            element.style.display = 'none' //hide answer element
+        }
+     }
+ 
+ 
+window.onload = init;
+</script>
+</html>

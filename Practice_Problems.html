@@ -28,17 +28,15 @@ pre {
     color: white;
 }
 
-/* Increase the font size of the h1 element */
 .header h1 {
     font-size: 40px;
 }
-    /* Style the top navigation bar */
+    
 .navbar {
     overflow: hidden;
     background-color: #333;
 }
 
-/* Style the navigation bar links */
 .navbar a {
     float: left;
     display: block;
@@ -48,31 +46,30 @@ pre {
     text-decoration: none;
 }
 
-/* Right-aligned link */
+
 .navbar a.right {
     float: right;
 }
 
-/* Change color on hover */
+/
 .navbar a:hover {
     background-color: #ddd;
     color: black;
 }
-/* Column container */
+
 .row {
     display: flex;
     flex-wrap: wrap;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
+
 .side {
     flex: 30%;
     background-color: #f1f1f1;
     padding: 20px;
 }
 
-/* Main column */
+
 .main {
     flex: 70%;
     background-color: white;
@@ -83,14 +80,13 @@ pre {
     display: block;
     margin: 0 auto 5px auto;
 }
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 700px) {
     .row {
         flex-direction: column;
     }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
     .navbar a {
         float: none;
@@ -205,30 +201,26 @@ function toggle(tag) {
         }
     }
     function init() {
-        //this function will add show hide functionality to paired list items,
-        //as long as the answer is a list item straight after the question list item.
-        //You can also have as many separate lists as you want.
-        //all lists must be contained within a div with id QA
+      
  
         var obj = document.getElementById('Prob_Qs');
         var elements = obj.getElementsByTagName('li');
                var index = 1
-        //add javascript to question elements
-              //you could also add styling to question elements here
+       
         for (var i=0; i < elements.length; i+=2){
             var element = elements[i];
             element.innerHTML = "<a href='javascript:toggle(" + index + ")'>" + element.innerHTML + "</a>"
             index = index + 1
         }
-        //add bookmark to answer elements and add styling
+       
         var index = 1
         for (var i=1; i < elements.length; i+=2){
             var element = elements[i];
             element.innerHTML = "<a name='" + index + "' id='" + index + "'></a>" + element.innerHTML
             index = index + 1
-                 element.style.padding = '0px 0px 10px 20px' //add indent to answer
-                       element.style.listStyleType = 'none' //remove bullet
-            element.style.display = 'none' //hide answer element
+                 element.style.padding = '0px 0px 10px 20px' 
+                       element.style.listStyleType = 'none' 
+            element.style.display = 'none' 
         }
      }
  
